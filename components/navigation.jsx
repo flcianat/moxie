@@ -5,11 +5,13 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 import { usePathname, useRouter } from "next/navigation";
 import CreateProject from "./create-project";
+import { useEffect } from "react";
 
 export default function Navigation() {
   const menu = ["overview", "projects"];
   const path = usePathname().split("/")[1];
   const router = useRouter();
+
   return (
     <div className="flex justify-between place-items-center p-4 px-8 bg-white sticky top-0">
       <h1 className="text-3xl font-bold flex gap-3  place-items-center">

@@ -53,7 +53,7 @@ export default function Projects() {
             return (
               <Card className="p-3 flex gap-3 place-items-center" key={i}>
                 <Avatar>
-                  <AvatarImage src={team.img} alt={team.name} />
+                  <AvatarImage src={`.${team.img}`} alt={team.name} />
                 </Avatar>
                 <div>
                   <h1 className="text-sm font-medium">{team.name}</h1>

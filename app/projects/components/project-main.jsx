@@ -23,6 +23,7 @@ import { useState } from "react";
 import { projectData } from "@/app/data";
 import { DropdownAttachment } from "@/components/menu-attachment";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Projects() {
   const path = usePathname().split("/")[2];
@@ -53,7 +54,7 @@ export default function Projects() {
             return (
               <Card className="p-3 flex gap-3 place-items-center" key={i}>
                 <Avatar>
-                  <AvatarImage src={`.${team.img}`} alt={team.name} />
+                  <AvatarImage src={`/assets/${team.img}`} alt={team.name} />
                 </Avatar>
                 <div>
                   <h1 className="text-sm font-medium">{team.name}</h1>
